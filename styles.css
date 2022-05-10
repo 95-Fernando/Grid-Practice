@@ -1,0 +1,138 @@
+body {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  background-color: var(--color-five);
+  box-sizing: border-box;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title{
+  margin-left: 20px;
+}
+
+:root{
+  --color-one: hsl(263, 55%, 52%);
+  --color-two: hsl(217, 19%, 35%);
+  --color-three: hsl(219, 29%, 14%);
+  --color-four: hsl(0, 0%, 81%);
+  --color-five: hsl(210, 46%, 95%);
+  --color-six: white;
+  --color-seven: rgb(167, 163, 163);
+}
+
+.container{
+  display: grid;
+  gap: 1.5rem;
+  margin: 20px;
+}
+
+@media screen and (min-width: 960px) {
+  .container{
+    display: grid;
+    margin: 20px;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+    "a a b c"
+    "d e e c";
+  }
+
+  .container__card:nth-child(1){
+    background-color: var(--color-one);
+    grid-area: a;
+  }
+  
+  .container__card:nth-child(2){
+    background-color: var(--color-two)
+  }
+
+  .container__card:nth-child(3){
+    background-color: var(--color-six);
+    grid-area: c;
+  }
+
+  .container__card:nth-child(4){
+    background-color: var(--color-six);
+  }
+  
+  .container__card:nth-child(5){
+    background-color: var(--color-three);
+    grid-area: e;
+  }
+}
+
+.container__card:nth-child(1){
+  background-color: var(--color-one);
+}
+
+.container__card:nth-child(2){
+  background-color: var(--color-two)
+}
+
+.container__card:nth-child(3){
+  background-color: var(--color-six);
+}
+
+.container__card:nth-child(4){
+  background-color: var(--color-six);
+}
+
+.container__card:nth-child(5){
+  background-color: var(--color-three);
+}
+
+.container__card{
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.photo{
+  border-radius: 50px;
+  max-width: 15%;
+  border: 2px solid  var(--color-six);
+}
+
+.photo--black{
+  border-radius: 50px;
+  max-width: 15%;
+  border: 2px solid  var(--color-three);
+}
+
+.user{
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.user__info{
+  margin-left: 15px;
+  line-height: 10px;
+}
+
+.user__status{
+  opacity: .5;
+}
+
+.user__info--black{
+  color: var(--color-three);
+}
+
+.container__subtitle{
+  color: var(--color-four)
+}
+
+.container__text{
+  color: var(--color-seven);
+  font-size: 1.1rem;
+}
+
+
+
+
+
+
+
+
+
+
